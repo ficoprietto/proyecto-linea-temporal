@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Línea Temporal</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Timeline</h1>
+      <h2>
+        Aplicación en JavaScript que transforma un JSON con eventos en una línea
+        temporal visual.
+      </h2>
+      <button
+        class="mostrarHistoriaZelda cardStyle centerFixed"
+        id="mostrarHistoriaZelda"
+      >
+        Mostrar Timeline de Zelda
+      </button>
+    </header>
+    <main id="mainContent" class="mainContent"></main>
+    <aside>
+      <div id="whiteVeil" class="whiteVeil"></div>
+      <button id="hideForm" class="hideForm rightHidden">X</button>
+      <form
+        action="#!"
+        method="post"
+        id="nuevoEventoZelda"
+        class="nuevoEventoZelda"
+      >
+        <fieldset>
+          <legend>
+            Añade un nuevo evento temporal relacionado con el juego Zelda
+          </legend>
+
+          <label for="nuevoTitulo">Título</label>
+          <input type="text" id="nuevoTitulo" name="nuevoTitulo" required />
+
+          <label for="nuevafecha">Fecha</label>
+          <input
+            type="text"
+            id="nuevafecha"
+            name="nuevafecha"
+            placeholder="Solo el año. Ejemplo: 2006"
+            required
+          />
+
+          <label for="nuevaImagen">Url de la imagen</label>
+          <input type="text" id="nuevaImagen" name="nuevaImagen" required />
+
+          <label for="nuevaDescripcion">Descripción</label>
+          <textarea
+            placeholder="max 700 caracteres"
+            maxlength="700"
+            name="nuevaDescripcion"
+            id="nuevaDescripcion"
+            required
+          ></textarea>
+
+          <p>
+            <button class="cardStyle" id="addEevent">Añadir evento</button>
+            <button class="cardStyle" id="resetForm" type="reset">
+              Resetea formulario
+            </button>
+          </p>
+        </fieldset>
+      </form>
+    </aside>
+    <footer>
+      <button id="showForm" class="showForm cardStyle flex">
+        Añade evento temporal Zelda
+      </button>
+      <p>Hack A Boss 2024 - Desarrollado por David Mirás y Federico Prieto</p>
+    </footer>
+    <button class="backToTop rightHidden" id="backToTop">top</button>
+    <script src="js/scriptInterval.js"></script>
+  </body>
+</html>
