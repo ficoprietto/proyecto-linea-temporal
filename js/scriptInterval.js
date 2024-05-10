@@ -11,6 +11,7 @@ const btnHideForm = document.getElementById('hideForm');
 const nuevoEventoForm = document.getElementById('nuevoEventoZelda');
 const veloBlanco = document.getElementById('whiteVeil');
 const backToTopButton = document.getElementById('backToTop');
+const htmlTag = document.querySelector("html");
 const intervalo = 750;
 const anioActual = new Date().getFullYear();
 const sortEventosPorFecha = lista => {
@@ -89,6 +90,7 @@ const muestraForm = () => {
   veloBlanco.classList.add('manifiestate');
   backToTopButton.classList.add('rightHidden');
   btnHideForm.classList.remove('rightHidden');
+  htmlTag.style.overflow = "hidden";
 }
 
 const escondeForm = () => {
@@ -97,6 +99,8 @@ const escondeForm = () => {
   veloBlanco.classList.remove('manifiestate');
   backToTopButton.classList.remove('rightHidden');
   btnHideForm.classList.add('rightHidden');
+  htmlTag.style.overflow = "auto";
+  // removeAttribute
 }
 
 // -------
