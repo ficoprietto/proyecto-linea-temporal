@@ -1,5 +1,3 @@
-/* @layer ??? */
-/* https://frontendmasters.com/blog/what-you-need-to-know-about-modern-css-spring-2024-edition/ */
 @import url('https://fonts.googleapis.com/css2?family=Freeman&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Freeman&family=Yanone+Kaffeesatz:wght@200..700&display=swap');
 
@@ -30,7 +28,6 @@ html{box-sizing:border-box;overflow-y:scroll;-webkit-text-size-adjust:100%}*,:af
 }
 
 body {
-    overflow-x: hidden;
     display: flex;
     flex-direction: column;
     min-height: 100vh;

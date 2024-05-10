@@ -12,7 +12,7 @@ const nuevoEventoForm = document.getElementById('nuevoEventoZelda');
 const veloBlanco = document.getElementById('whiteVeil');
 const backToTopButton = document.getElementById('backToTop');
 const htmlTag = document.querySelector("html");
-const intervalo = 750;
+const intervalo = 400;
 const anioActual = new Date().getFullYear();
 const sortEventosPorFecha = lista => {
   lista.sort((a, b) => a.date - b.date);
@@ -94,13 +94,42 @@ const muestraForm = () => {
 }
 
 const escondeForm = () => {
-  btnShowForm.classList.add('manifiestate');
   nuevoEventoForm.classList.remove('manifiestate');
   veloBlanco.classList.remove('manifiestate');
   backToTopButton.classList.remove('rightHidden');
   btnHideForm.classList.add('rightHidden');
+  btnShowForm.classList.add('manifiestate');
   htmlTag.style.overflow = "auto";
 }
+
+// -------
+
+document.getElementById('nuevoEventoZelda').addEventListener('submit', function (event) {
+  event.preventDefault();
+  const fechaForm = document.getElementById('nuevafecha');
+  const alertError = document.getElementById('alertError');
+
+  if (fechaForm.value > 1979 && fechaForm.value <= anioActual) {
+    const nuevoEvento = {
+      title: document.getElementById('nuevoTitulo').value,
+      date: document.getElementById('nuevafecha').value,
+      image: document.getElementById('nuevaImagen').value,
+      text: document.getElementById('nuevaDescripcion').value,
+    };
+    alertError.removeAttribute('style');
+    eventos.push(nuevoEvento);  
+    sortEventosPorFecha(eventos); 
+    
+    document.getElementById('contenedorLineatemporal');
+    laSection.innerHTML = '';
+  
+    escondeForm();
+    showHistory();
+    event.target.reset(); // vacía los campos del form
+  } else {
+    alertError.style.display = 'block';
+  }
+});
 
 // -------
 

@@ -40,15 +40,19 @@
 
           <label for="nuevafecha">Fecha</label>
           <input
-            type="text"
+            type="number"
             id="nuevafecha"
             name="nuevafecha"
             placeholder="Solo el año. Ejemplo: 2006"
+            maxlength="4"
             required
           />
+          <p id="alertError" class="alertError">
+            Introduce una fecha entre 1979 y el año actual
+          </p>
 
           <label for="nuevaImagen">Url de la imagen</label>
-          <input type="text" id="nuevaImagen" name="nuevaImagen" required />
+          <input type="url" id="nuevaImagen" name="nuevaImagen" required />
 
           <label for="nuevaDescripcion">Descripción</label>
           <textarea

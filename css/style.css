@@ -1,16 +1,5 @@
 @import url("reusable.css");
 
-/*  flexbox a los bts del form??
-    flexbox al fieldset??    
-    btn showForm  
-    limitar caracteres en textarea
-    validar fecha form 4 cifras, número entero
-    tamaño fonts not % <<=======
-    recoger todos los clicks sobre btns en una sola función
-    https://github.com/DavidMiras/linea_temporal
-*/
-
-
 p, label, legend, ::placeholder, input, textarea, button {
     font-family: "Yanone Kaffeesatz", sans-serif;
     font-optical-sizing: auto;
@@ -20,11 +9,11 @@ p, label, legend, ::placeholder, input, textarea, button {
 }
 
 p, label, legend, ::placeholder {
-    font-size: 130%;
+    font-size: 1.4rem;
 }
 
 ::placeholder, .backToTop {
-    font-size: 115%; /* *** */
+    font-size: 1.33rem;
 }
 
 .fechaEvento {
@@ -58,7 +47,7 @@ main {
 
 /* ------- */
 
-.mainContent article { /* añadir clase */
+.mainContent article {
     margin-bottom: 1.5rem;
     min-height: 220px;
     position: relative;
@@ -94,10 +83,8 @@ main {
 
 .hideForm {    
     top: 1.5rem;     
-    transition: transform .5s ease-out /*.75s*/;      
+    transition: transform .5s ease-out;      
 }
-
-/* btn cerrar LIGHTBOX!!!! cancel scroll con LIGHTBOX ON /// vaciar campos form */
 
 .backToTop, .hideForm {
     position: fixed;
@@ -132,7 +119,7 @@ main {
 }
 
 .whiteVeil, .nuevoEventoZelda {
-    transition: transform .5s ease-out /*.75s*/;
+    transition: transform .5s ease-out;
 }
 
 .whiteVeil {
@@ -162,6 +149,11 @@ main {
     transform: translateX(0);
 }
 
+.alertError {
+    display: none;
+    color: red;
+}
+
 label {
     display: block;
     margin: .75rem 0 .5rem;
@@ -185,7 +177,7 @@ textarea {
 }
 
 input, textarea {
-    width: 100%;
+    width: 100% !important;
     padding: .75rem;
 }
 
@@ -214,7 +206,7 @@ button {
 .showForm {
     position: relative;
     top: 10rem;
-    transition: top .5s ease .5s;
+    transition: top .5s ease 1s;
 }
 
 .showForm.manifiestate {
@@ -225,9 +217,9 @@ button:not(.backToTop):hover {
     background-color: var(--darkGrey);
 }
 
-@media all and (min-width: 550px) {
-    .mainContent img {
-        max-width: 350px;
+@media all and (min-width: 500px) {
+    .mainContent img {  
+        max-width: 419px;
     }
 }
 
@@ -237,11 +229,11 @@ button:not(.backToTop):hover {
     }
 
     .mainContent article div:first-of-type {
-        width: 35%;
+        width: 27%;
     }
 
     .mainContent article div:last-of-type {
-        width: 65%;
+        width: 73%;
     }
 
     .mainContent article:nth-child(even) div:first-of-type {
@@ -261,12 +253,3 @@ button:not(.backToTop):hover {
     }
 }
 
-@media all and (min-width: 1000px) {
-    .mainContent article div:first-of-type {
-        width: 25%;
-    }
-
-    .mainContent article div:last-of-type {
-        width: 75%;
-    }
-}
