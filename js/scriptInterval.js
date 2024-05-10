@@ -11,6 +11,7 @@ const nuevoEventoForm = document.getElementById('nuevoEventoZelda');
 const veloBlanco = document.getElementById('whiteVeil');
 const backToTopButton = document.getElementById('backToTop');
 const intervalo = 750;
+const anioActual = new Date().getFullYear();
 const sortEventosPorFecha = lista => {
   lista.sort((a, b) => a.date - b.date);
 };
