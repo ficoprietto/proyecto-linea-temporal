@@ -96,9 +96,43 @@ document.getElementById('nuevoEventoForm').addEventListener('submit', function (
 });
 
 
+// MUESTRA los <article> on Scroll
+
+let allArticles;
+// console.log(allArticles);
+window.addEventListener('scroll', () => {
+  let scrollPosition = window.scrollY + 750;
+  // console.log('=================> ' + window.scrollY);
+
+  allArticles.forEach(article => {
+      if (scrollPosition >= article.offsetTop) {
+        article.classList.add('scaleToOne');
+      }
+  });
+});
+
+// window.addEventListener('load', () => {
+//   let scrollPosition = window.scrollY + 750;
+//   // console.log('=================> ' + window.scrollY);
+
+//   allArticles.forEach(article => {
+//       if (scrollPosition >= article.offsetTop) {
+//         article.classList.add('scaleToOne');
+//       }
+//   });
+// });
+
+
 // APUNTES (esto es solo para tener funciones a mano. Se borra en la versión definitiva):
 // -------
-// href="#!"
+// https://stackoverflow.com/questions/64546023/run-javascript-function-if-page-load-scroll-and-resize
+// https://jonathanjernigan.com/add-a-class-based-on-scroll-position-with-javascript/
+// https://gist.github.com/ohiosveryown/93015ccc1f43437db6169dbfb18196fa
+// https://timoanttila.com/blog/change-class-with-javascript-based-on-vertical-scroll <<=======
+// https://gist.github.com/ohiosveryown/93015ccc1f43437db6169dbfb18196fa
+// https://frontendmasters.com/blog/what-you-need-to-know-about-modern-css-spring-2024-edition/
+// https://i.blogs.es/337686/060317-zeldawiiu-review/1366_2000.jpg
+// cancel scroll al body con LIGHTBOX ON <<=======
 // eventos.reverse();
 // document.querySelector('#contenedorDeTareas>ul').insertAdjacentHTML('beforeend', newLi);
 // Librerías css
