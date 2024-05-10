@@ -3,6 +3,7 @@ let eventos = [];
 let count1 = 0;
 let laSection;
 let muestraEnIntervalos;
+let allArticles;
 const btnMuestraHistorial = document.getElementById('mostrarHistoriaZelda'); 
 const mainContent = document.getElementById('mainContent');
 const btnShowForm = document.getElementById('showForm');
