@@ -100,7 +100,6 @@ const escondeForm = () => {
   backToTopButton.classList.remove('rightHidden');
   btnHideForm.classList.add('rightHidden');
   htmlTag.style.overflow = "auto";
-  // removeAttribute
 }
 
 // -------
